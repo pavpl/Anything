@@ -1,60 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="icon" type="image/png" href="https://s1.iconbird.com/ico/1212/268/w256h2561356454038ChristmasTreeIconInstaTuts.com256.png">
-    <title>Отсчет времени до Нового Года</title>
-<style>
-    body {
-  	background-image: url('https://i.pinimg.com/originals/f7/49/6f/f7496f83b1bfe93f09598fd9e813f16f.gif');
-	background-size: cover;
-  	background-repeat: no-repeat;
-  	color: #008000;
-  	font-family: Arial, sans-serif;
-  	text-align: center;
-    }
-    
-    h1 {
-      font-size: 95px;
-      margin: 0.5em 0;
-	    color: #008000;
-      transition: color 1s;
-    }
-
-    h1:hover {
-      color: red;
-    }
-    
-    p {
-      font-size: 70px;
-      margin: 0.5em 0;
-	    color: #008000;
-      transition: color 1s;
-    }
-
-    p:hover {
-      color: red;
-    }
-    
-    .new-year {
-      color: #ff0000;
-    }
-
-    .footer {
-    	position: fixed;
-    	right: 25px;
-    	bottom: 15px;
-    	color: white;
-	    font-size: 15px;
-  	}
-  </style>
-</head>
-<body>
-  <h1>Время до нового года:</h1>
-  <p id="countdown"></p>
+function updateCountdown() {
   
-  <script>
-  function updateCountdown() {
-    
   // Определяем текущую дату
   var currentDate = new Date();
 
@@ -117,22 +62,14 @@
   }
 
   if (seconds % 10 == 1 && seconds % 100 != 11) {
-    var secondString = " секунда ";
+    var secondString = " секунда";
   } else if (seconds % 10 >= 2 && seconds % 10 <= 4 && (seconds % 100 < 10 || seconds % 100 > 20)) {
-    var secondString = " секунды ";
+    var secondString = " секунды";
   } else {
-    var secondString = " секунд ";
+    var secondString = " секунд";
   }
 
-  // Обновляем текст на странице с помощью метода textContent
-  document.getElementById("countdown").textContent = months + monthString + weeks + weekString + days + dayString + hours + hourString + minutes + minuteString + seconds + secondString;
-  }
+  document.getElementById("countdown").innerHTML = months + monthString + weeks + weekString + days + dayString + hours + hourString + minutes + minuteString + seconds + secondString;
+}
 
-  // Запускаем функцию updateCountdown каждую секунду
-  setInterval(updateCountdown, 1000);
-  </script>
-
-	<p class="footer">Сделано ChatPGT и pavpl</p>
-
-</body>
-</html>
+setInterval(updateCountdown, 1000);

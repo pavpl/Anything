@@ -1,0 +1,41 @@
+body {
+  background-image: url('https://i.pinimg.com/originals/f7/49/6f/f7496f83b1bfe93f09598fd9e813f16f.gif');
+  background-size: cover;
+  color: #008000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 95px;
+  margin: 0.5em 0;
+  color: #008000;
+  transition: color 1s;
+}
+
+h1:hover {
+  color: red;
+}
+
+p {
+  font-size: 70px;
+  margin: 0.5em 0;
+  color: #008000;
+  transition: color 1s;
+}
+
+p:hover {
+  color: red;
+}
+
+.new-year {
+  color: #ff0000;
+}
+
+.footer {
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  color: white;
+  font-size: 15px;
+}
