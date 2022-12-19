@@ -1,16 +1,23 @@
 body {
-  background-image: url('https://i.pinimg.com/originals/f7/49/6f/f7496f83b1bfe93f09598fd9e813f16f.gif');
-  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
   color: #008000;
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
+h1, p {
+  transition: color 1s;
+  position: absolute;
+}
+
 h1 {
-  font-size: 95px;
+  font-size: 100px;
   margin: 0.5em 0;
   color: #008000;
-  transition: color 1s;
+  top: 30%;
+  left: 20%;
 }
 
 h1:hover {
@@ -18,17 +25,18 @@ h1:hover {
 }
 
 p {
-  font-size: 70px;
+  font-size: 50px;
   margin: 0.5em 0;
   color: #008000;
-  transition: color 1s;
+  top: 45%;
+  left: 15%;
 }
 
 p:hover {
   color: red;
 }
 
-.new-year {
+.new-year, .footer {
   color: #ff0000;
 }
 
@@ -36,6 +44,5 @@ p:hover {
   position: fixed;
   right: 25px;
   bottom: 15px;
-  color: white;
   font-size: 15px;
 }
